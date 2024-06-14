@@ -2,7 +2,7 @@
 
 #include <limits>
 
-Min::Min() : m_min{std::numeric_limits<double>::min()}
+Min::Min() : m_min{std::numeric_limits<double>::max()}
 {
 }
 
