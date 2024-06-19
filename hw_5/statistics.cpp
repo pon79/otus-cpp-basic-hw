@@ -1,16 +1,20 @@
 #include <iostream>
+#include <iomanip>
+
 #include "max.h"
 #include "mean.h"
 #include "min.h"
+#include "stddeviation.h"
 
 int main() {
 
-    const size_t statistics_count = 3;
+    const size_t statistics_count = 4;
 	IStatistics *statistics[statistics_count];
 
     statistics[0] = new Min{};
     statistics[1] = new Max{};
     statistics[2] = new Mean{};
+    statistics[3] = new StdDeviation{};
 
 	double val = 0;
 	while (std::cin >> val) {
@@ -27,7 +31,7 @@ int main() {
 
 	// Print results if any
 	for (size_t i = 0; i < statistics_count; ++i) {
-		std::cout << statistics[i]->name() << " = " << statistics[i]->eval() << std::endl;
+        std::cout << statistics[i]->name() << " = " << std::setprecision(8) << statistics[i]->eval() << std::endl;
 	}
 
 	// Clear memory - delete all objects created by new
