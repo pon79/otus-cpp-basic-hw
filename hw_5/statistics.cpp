@@ -9,15 +9,11 @@
 int main() {
 
     const size_t statistics_count = 4;
-	IStatistics *statistics[statistics_count];
-
-    statistics[0] = new Min{};
-    statistics[1] = new Max{};
-    statistics[2] = new Mean{};
-    statistics[3] = new StdDeviation{};
+    IStatistics *statistics[statistics_count] = { new Min{}, new Max{}, new Mean{}, new StdDeviation{} };
 
 	double val = 0;
 	while (std::cin >> val) {
+        std::cout << "val: " << val << '\n';
 		for (size_t i = 0; i < statistics_count; ++i) {
 			statistics[i]->update(val);
 		}
