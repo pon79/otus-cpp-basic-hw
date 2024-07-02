@@ -1,8 +1,9 @@
 #include "max.h"
 
 #include <limits>
+#include <iostream>
 
-Max::Max() : m_max{std::numeric_limits<double>::min()}
+Max::Max() : m_max{std::numeric_limits<double>::lowest()}
 {
 }
 
