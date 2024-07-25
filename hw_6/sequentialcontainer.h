@@ -7,6 +7,9 @@ class SequentialContainer
 {
 public:
     SequentialContainer();
+    ~SequentialContainer();
+
+    void push_back( int value );
 
 
 private:
