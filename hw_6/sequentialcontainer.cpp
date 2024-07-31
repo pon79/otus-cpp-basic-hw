@@ -33,7 +33,7 @@ size_t SequentialContainer::size() const
 
 int& SequentialContainer::operator[](int index)
 {
-    if( index > 0 && index < m_size ) {
+    if( index >= 0 && index < m_size ) {
         return m_region[index];
     } else {
         // TO DO  exception handling
