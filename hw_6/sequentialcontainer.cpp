@@ -26,6 +26,11 @@ void SequentialContainer::push_back(int value)
     m_size += 1;
 }
 
+size_t SequentialContainer::size() const
+{
+    return m_size;
+}
+
 int& SequentialContainer::operator[](int index)
 {
     if( index > 0 && index < m_size ) {

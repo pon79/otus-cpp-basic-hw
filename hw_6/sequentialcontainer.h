@@ -10,6 +10,7 @@ public:
     ~SequentialContainer();
 
     void push_back( int value );
+    size_t size() const;
 
     int& operator[](int index);
 

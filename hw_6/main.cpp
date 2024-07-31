@@ -1,6 +1,7 @@
 #include <iostream>
 
 #include "sequentialcontainer.h"
+#include <vector>
 
 using namespace std;
 
@@ -11,7 +12,9 @@ int main()
     myVector.push_back( 1 );
     myVector.push_back( 2 );
 
-    cout << myVector[2] << '\n';
+    cout << myVector[1] << '\n';
+
+    cout << myVector.size() << '\n';
 
     return 0;
 }
