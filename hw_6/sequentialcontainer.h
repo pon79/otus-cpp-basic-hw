@@ -1,13 +1,19 @@
 #ifndef SEQUENTIALCONTAINER_H
 #define SEQUENTIALCONTAINER_H
 
-#include <cuchar>
+#include <cuchar> // size_t
+#include <initializer_list>
+
 
 class SequentialContainer
 {
 public:
-    SequentialContainer();    
+    SequentialContainer();
+    SequentialContainer( size_t n );
+    SequentialContainer( std::initializer_list<int> list);
+
     ~SequentialContainer();
+
 
     void push_back( int value );
     size_t size() const;

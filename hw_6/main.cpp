@@ -7,12 +7,12 @@ using namespace std;
 
 int main()
 {
-    SequentialContainer myVector;
+    SequentialContainer myVector = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
-    myVector.push_back( 1 );
-    myVector.push_back( 2 );
-
-    cout << myVector[1] << '\n';
+    for( std::size_t index{0}; index < myVector.size() ; index++ ) {
+        cout << myVector[index];
+        cout << (index < myVector.size() - 1 ? ", " : "\n");
+    }
 
     cout << myVector.size() << '\n';
 

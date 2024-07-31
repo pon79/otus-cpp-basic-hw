@@ -1,10 +1,27 @@
 #include "sequentialcontainer.h"
 
+#include <algorithm>
+
 SequentialContainer::SequentialContainer()
     : m_region{ nullptr }
     , m_size{0}
 {
+}
 
+SequentialContainer::SequentialContainer(size_t n)
+    : m_region{ new int[n] }
+    , m_size{n}
+{
+    for( size_t index{0}; index < m_size ; index++) {
+        m_region[index] = 0;
+    }
+}
+
+SequentialContainer::SequentialContainer(std::initializer_list<int> list)
+    : m_region{ new int[list.size()] }
+    , m_size{list.size()}
+{
+    std::copy(list.begin(), list.end(), m_region);
 }
 
 SequentialContainer::~SequentialContainer()
