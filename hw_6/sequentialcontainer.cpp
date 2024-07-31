@@ -39,3 +39,12 @@ int& SequentialContainer::operator[](int index)
         // TO DO  exception handling
     }
 }
+
+int SequentialContainer::operator[](int index) const
+{
+    if( index >= 0 && index < m_size ) {
+        return m_region[index];
+    } else {
+        // TO DO  exception handling
+    }
+}
