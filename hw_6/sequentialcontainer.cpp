@@ -25,3 +25,12 @@ void SequentialContainer::push_back(int value)
     m_region = new_region;
     m_size += 1;
 }
+
+int& SequentialContainer::operator[](int index)
+{
+    if( index > 0 && index < m_size ) {
+        return m_region[index];
+    } else {
+        // TO DO  exception handling
+    }
+}

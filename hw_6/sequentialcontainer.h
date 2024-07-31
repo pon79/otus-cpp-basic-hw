@@ -6,11 +6,12 @@
 class SequentialContainer
 {
 public:
-    SequentialContainer();
+    SequentialContainer();    
     ~SequentialContainer();
 
     void push_back( int value );
 
+    int& operator[](int index);
 
 private:
     int *m_region;
