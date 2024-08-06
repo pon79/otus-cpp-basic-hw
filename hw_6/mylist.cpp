@@ -62,6 +62,35 @@ void MyList::erase(const int eraseIndex)
     delete node;
 }
 
+void MyList::insert(const int insertIndex, const int value)
+{
+    Node *node = new Node{};
+    node->data = value;
+
+    if( insertIndex == 0 ) {
+        node->next = m_first;
+        m_first = node;
+        m_first->next->prev = m_first;
+    } else if( insertIndex == (m_size - 1) ) {
+        node->prev = m_last;
+        m_last = node;
+        m_last->prev->next = m_last;
+    } else {
+        Node *prevNode{ m_first };
+
+        for( size_t index{0}; index < (insertIndex - 1) ; index++) {
+            prevNode = prevNode->next;
+        }
+
+        node->next = prevNode->next;
+        node->prev = prevNode;
+        prevNode->next = node;
+        node->next->prev = node;
+    }
+
+    m_size++;
+}
+
 std::size_t MyList::size() const
 {
     return m_size;

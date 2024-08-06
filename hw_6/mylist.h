@@ -21,6 +21,7 @@ public:
 
     void puch_back( const int value );
     void erase(const int eraseIndex );
+    void insert(const int insertIndex , const int value);
 
     std::size_t size() const;
 

@@ -9,7 +9,10 @@ void testMyList();
 
 int main()
 {
-//    testSequentialContainer();
+
+    testSequentialContainer();
+
+    std::cout << '\n';
 
     testMyList();
 
@@ -56,4 +59,12 @@ void testMyList()
     myList.erase(4); // седьмой элемент по счёту в первоначальном контейнере
     std::cout << myList;
 
+    myList.insert( 0, 10 );
+    std::cout << myList;
+
+    myList.insert( myList.size() / 2, 20 );
+    std::cout << myList;
+
+    myList.puch_back( 30 );
+    std::cout << myList;
 }
