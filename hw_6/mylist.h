@@ -19,6 +19,8 @@ public:
     MyList();
     MyList( std::initializer_list<int> list);
 
+    ~MyList();
+
     void puch_back( const int value );
     void erase(const int eraseIndex );
     void insert(const int insertIndex , const int value);
