@@ -1,6 +1,7 @@
 #ifndef MYLIST_H
 #define MYLIST_H
 
+#include <iostream>
 #include <cstddef> // size_t
 
 struct Node {
@@ -18,6 +19,8 @@ public:
     MyList();
 
     void puch_back( const int value );
+
+    std::size_t size() const;
 };
 
 #endif // MYLIST_H

@@ -17,3 +17,8 @@ void MyList::puch_back(const int value)
     m_last = new_node; // обновляем указатель на последний
     m_size += 1; // обновляем размер
 }
+
+std::size_t MyList::size() const
+{
+    return m_size;
+}
