@@ -9,6 +9,7 @@ MyList::MyList()
 }
 
 MyList::MyList(std::initializer_list<int> list)
+    : m_size{0}
 {
     for( const auto &number : list ) {
         puch_back( number );
@@ -24,8 +25,8 @@ void MyList::puch_back(const int value)
 
     m_last = new_node; // обновляем указатель на последний    
 
-    if( m_last->prev )
-        m_last->prev->next = new_node;
+    if( m_size > 0 )
+        m_last->prev->next = m_last;
 
     if( m_size == 0 )
         m_first = new_node;
