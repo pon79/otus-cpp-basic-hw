@@ -1,9 +1,11 @@
 #include <iostream>
 
 #include "sequentialcontainer.h"
-#include <vector>
+#include "mylist.h"
 
 void testSequentialContainer();
+
+void testMyList();
 
 int main()
 {
@@ -37,4 +39,12 @@ void testSequentialContainer()
     myVector.push_back( 30 );
 
     std::cout << myVector;
+}
+
+void testMyList()
+{
+    MyList myList;
+
+    myList.puch_back( 250 );
+
 }
