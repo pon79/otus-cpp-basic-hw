@@ -3,7 +3,16 @@
 #include "sequentialcontainer.h"
 #include <vector>
 
+void testSequentialContainer();
+
 int main()
+{
+    testSequentialContainer();
+
+    return 0;
+}
+
+void testSequentialContainer()
 {
     SequentialContainer myVector = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
@@ -28,6 +37,4 @@ int main()
     myVector.push_back( 30 );
 
     std::cout << myVector;
-
-    return 0;
 }
