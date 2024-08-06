@@ -5,8 +5,8 @@
 #include <cstddef> // size_t
 
 struct Node {
-    Node* next; // указатель на следующий элемент Node
-    Node* prev; // указатель на предыдущий элемент Node
+    Node* next{}; // указатель на следующий элемент Node
+    Node* prev{}; // указатель на предыдущий элемент Node
     int data; // пользовательские данные (хранимый объект)
 };
 
@@ -21,6 +21,9 @@ public:
     void puch_back( const int value );
 
     std::size_t size() const;
+
+    int& operator[](const int index);
+    int operator[](const int index) const;
 };
 
 #endif // MYLIST_H

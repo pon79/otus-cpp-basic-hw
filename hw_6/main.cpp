@@ -11,6 +11,8 @@ int main()
 {
 //    testSequentialContainer();
 
+    testMyList();
+
     return 0;
 }
 
@@ -45,6 +47,13 @@ void testMyList()
 {
     MyList myList;
 
-    myList.puch_back( 250 );
+    myList.puch_back( 2 );
+    myList.puch_back( 4 );
+    myList.puch_back( 8 );
+
+    for( std::size_t index{0}; index < myList.size() ; index++ ) {
+        std::cout << myList[index];
+        std::cout << (index < myList.size() - 1 ? ", " : "\n");
+    }
 
 }
