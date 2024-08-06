@@ -16,6 +16,17 @@ MyList::MyList(std::initializer_list<int> list)
     }
 }
 
+MyList::~MyList()
+{
+    Node *node{ m_first };
+
+    while ( node ) {
+      Node *next = node->next;
+      delete node;
+      node = next;
+    }
+}
+
 void MyList::puch_back(const int value)
 {
     Node* new_node = new Node{}; // создание нового узла
