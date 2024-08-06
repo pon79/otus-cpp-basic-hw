@@ -10,10 +10,11 @@ void testMyList();
 int main()
 {
 
+    std::cout << " -- SequentialContainer -- " << '\n';
     testSequentialContainer();
 
     std::cout << '\n';
-
+    std::cout << " -- MyList -- " << '\n';
     testMyList();
 
     return 0;
