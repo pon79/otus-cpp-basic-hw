@@ -1,9 +1,9 @@
 #ifndef SEQUENTIALCONTAINER_H
 #define SEQUENTIALCONTAINER_H
 
+#include <iostream>
 #include <cuchar> // size_t
 #include <initializer_list>
-
 
 class SequentialContainer
 {
@@ -25,5 +25,14 @@ private:
     int *m_region;
     size_t m_size;
 };
+
+inline std::ostream& operator<<( std::ostream& stream, SequentialContainer &container)
+{
+    for( std::size_t index{0}; index < container.size() ; index++ ) {
+        std::cout << container[index];
+        std::cout << (index < container.size() - 1 ? ", " : "\n");
+    }
+    return stream;
+}
 
 #endif // SEQUENTIALCONTAINER_H
