@@ -48,4 +48,12 @@ void testMyList()
     MyList myList = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
     std::cout << myList;
+
+    std::cout << myList.size() << '\n';
+
+    myList.erase(2); // третий элемент по счёту
+    myList.erase(3); // пятый элемент по счёту в первоначальном контейнере
+    myList.erase(4); // седьмой элемент по счёту в первоначальном контейнере
+    std::cout << myList;
+
 }

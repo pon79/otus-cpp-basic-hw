@@ -33,6 +33,35 @@ void MyList::puch_back(const int value)
     m_size += 1; // обновляем размер
 }
 
+void MyList::erase(const int eraseIndex)
+{
+    if( eraseIndex < 0 && eraseIndex >= m_size )
+        return;
+
+    Node *node = nullptr;
+
+    if( eraseIndex == 0 ) {
+        node = m_first;
+        m_first = m_first->next;
+        m_first->prev = nullptr;
+    } else if( eraseIndex == (m_size - 1) ) {
+        node = m_last;
+        m_last = m_last->prev;
+        m_last->next = nullptr;
+    } else {
+        node = m_first;
+
+        for( size_t index{0}; index < eraseIndex ; index++) {
+            node = node->next;
+        }
+
+        node->prev->next = node->next;
+    }
+
+    m_size--;
+    delete node;
+}
+
 std::size_t MyList::size() const
 {
     return m_size;

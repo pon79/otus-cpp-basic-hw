@@ -20,6 +20,7 @@ public:
     MyList( std::initializer_list<int> list);
 
     void puch_back( const int value );
+    void erase(const int eraseIndex );
 
     std::size_t size() const;
 
