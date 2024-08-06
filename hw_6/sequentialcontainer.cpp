@@ -64,6 +64,29 @@ void SequentialContainer::erase(const int eraseIndex)
     m_size--;
 }
 
+void SequentialContainer::insert(const int insertIndex, const int value)
+{
+    if( insertIndex < 0 || insertIndex >= m_size ) {
+        return;
+    }
+
+    int* new_region = new int[m_size + 1];
+
+    for (size_t index = 0; index < insertIndex; ++index) {
+        new_region[index] = m_region[index];
+    }
+
+    new_region[insertIndex] = value;
+
+    for (size_t index = insertIndex + 1; index <= m_size; ++index) {
+        new_region[index] = m_region[index - 1];
+    }
+
+    delete [] m_region;
+    m_region = new_region;
+    m_size++;
+}
+
 size_t SequentialContainer::size() const
 {
     return m_size;

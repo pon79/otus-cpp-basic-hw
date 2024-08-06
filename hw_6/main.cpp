@@ -17,5 +17,9 @@ int main()
 
     std::cout << myVector;
 
+    myVector.insert(0, 10);
+
+    std::cout << myVector;
+
     return 0;
 }
