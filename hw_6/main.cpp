@@ -21,5 +21,13 @@ int main()
 
     std::cout << myVector;
 
+    myVector.insert( myVector.size() / 2 , 20);
+
+    std::cout << myVector;
+
+    myVector.push_back( 30 );
+
+    std::cout << myVector;
+
     return 0;
 }
