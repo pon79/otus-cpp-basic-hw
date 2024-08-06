@@ -20,8 +20,8 @@ public:
 
     size_t size() const;
 
-    int& operator[](int index);
-    int operator[](int index) const;
+    int& operator[](const int index);
+    int operator[](const int index) const;
 
 private:
     int *m_region;

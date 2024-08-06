@@ -92,20 +92,14 @@ size_t SequentialContainer::size() const
     return m_size;
 }
 
-int& SequentialContainer::operator[](int index)
+int& SequentialContainer::operator[](const int index)
 {
-    if( index >= 0 && index < m_size ) {
-        return m_region[index];
-    } else {
-        // TO DO  exception handling
-    }
+    // TO DO check index >= 0 && index < m_size
+    return m_region[index];
 }
 
-int SequentialContainer::operator[](int index) const
+int SequentialContainer::operator[](const int index) const
 {
-    if( index >= 0 && index < m_size ) {
-        return m_region[index];
-    } else {
-        // TO DO  exception handling
-    }
+    // TO DO check index >= 0 && index < m_size
+    return m_region[index];
 }
