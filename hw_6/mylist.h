@@ -26,4 +26,13 @@ public:
     int operator[](const int index) const;
 };
 
+inline std::ostream& operator<<( std::ostream& stream, MyList &list)
+{
+    for( std::size_t index{0}; index < list.size() ; index++ ) {
+        std::cout << list[index];
+        std::cout << (index < list.size() - 1 ? ", " : "\n");
+    }
+    return stream;
+}
+
 #endif // MYLIST_H

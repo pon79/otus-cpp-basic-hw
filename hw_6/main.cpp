@@ -51,9 +51,5 @@ void testMyList()
     myList.puch_back( 4 );
     myList.puch_back( 8 );
 
-    for( std::size_t index{0}; index < myList.size() ; index++ ) {
-        std::cout << myList[index];
-        std::cout << (index < myList.size() - 1 ? ", " : "\n");
-    }
-
+    std::cout << myList;
 }
