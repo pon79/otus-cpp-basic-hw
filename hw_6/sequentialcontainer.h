@@ -14,8 +14,8 @@ public:
 
     ~SequentialContainer();
 
-
     void push_back( int value );
+    void erase(const int eraseIndex );
     size_t size() const;
 
     int& operator[](int index);
