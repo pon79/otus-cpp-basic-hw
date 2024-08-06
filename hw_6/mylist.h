@@ -17,6 +17,7 @@ class MyList
     std::size_t m_size;
 public:
     MyList();
+    MyList( std::initializer_list<int> list);
 
     void puch_back( const int value );
 

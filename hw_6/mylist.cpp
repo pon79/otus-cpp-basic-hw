@@ -8,6 +8,13 @@ MyList::MyList()
 
 }
 
+MyList::MyList(std::initializer_list<int> list)
+{
+    for( const auto &number : list ) {
+        puch_back( number );
+    }
+}
+
 void MyList::puch_back(const int value)
 {
     Node* new_node = new Node{}; // создание нового узла
