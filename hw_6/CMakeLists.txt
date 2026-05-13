@@ -3,7 +3,7 @@ cmake_minimum_required(VERSION 3.30)
 add_executable(my_container
     main.cpp
     sequentialcontainer.h
-    mylist.h mylist.cpp
+    mylist.h
 )
 
 set_target_properties(my_container PROPERTIES

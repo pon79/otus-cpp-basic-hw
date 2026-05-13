@@ -49,7 +49,7 @@ void testSequentialContainer()
 
 void testMyList()
 {
-    MyList myList = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+    MyList<int> myList = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
 
     std::cout << myList;
 
@@ -66,6 +66,7 @@ void testMyList()
     myList.insert( myList.size() / 2, 20 );
     std::cout << myList;
 
-    myList.puch_back( 30 );
+
+    myList.push_back( 30 );
     std::cout << myList;
 }
