@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.30)
 
 add_executable(my_container
     main.cpp
@@ -7,7 +7,7 @@ add_executable(my_container
 )
 
 set_target_properties(my_container PROPERTIES
-    CXX_STANDARD 20
+    CXX_STANDARD 23
     CXX_STANDARD_REQUIRED ON
 )
 
