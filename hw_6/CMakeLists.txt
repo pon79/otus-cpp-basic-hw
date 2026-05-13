@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.30)
 
 add_executable(my_container
     main.cpp
-    sequentialcontainer.h sequentialcontainer.cpp
+    sequentialcontainer.h
     mylist.h mylist.cpp
 )
 
